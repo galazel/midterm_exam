@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{ isset($title) ? $title . ' - Laravel Setup' : 'Laravel' }}</title>
+    <title>{{ isset($title) ? $title . ' - Laravel Setup' : 'Glyzel Galagar' }}</title>
     <link rel="preconnect" href="<https://fonts.bunny.net>">
     <link href="https://fonts.bunny.net/css?family=instrument-sans:400,500,600,700" rel="stylesheet" />
     <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
@@ -27,16 +27,16 @@
     @yield('content')
     <header class=" text-black bg-white h-[8vh] sticky top-0 border-b-2 border-gray-400 z-40">
         <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center h-full text-red-500">
-            <span class="ml-3 text-xl ">Laravel</span>
+            {{-- <span class="ml-3 text-xl ">Laravel</span> --}}
             <nav class="md:ml-auto md:mr-auto flex flex-wrap items-center text-base justify-center">
                 <a class="mr-5 hover:text-gray-900" href={{route('home')}}>Home</a>
                 <a class="mr-5 hover:text-gray-900" href={{route('about')}}>About</a>
                 <a class="mr-5 hover:text-gray-900" href={{route('gallery')}}>Gallery</a>
             </nav>
-            <button
+            {{-- <button
                 class="inline-flex items-center bg-gray-100 border-0 py-1 px-3 focus:outline-none hover:bg-gray-200 rounded text-base mt-4 md:mt-0">
                 Download
-            </button>
+            </button> --}}
         </div>
     </header>
     <main>

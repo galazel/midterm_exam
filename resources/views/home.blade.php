@@ -57,7 +57,7 @@
     <section class="flex justify-center m-10">
         <div class="flex flex-col gap-10">
             <div class="flex items-center justify-center  ">
-                <p class="text-[8rem] ">FEATURES</p>
+                <p class="section-title">FEATURES</p>
             </div>
             <div>
                 @foreach ($features as $feature)
