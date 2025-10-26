@@ -10,24 +10,32 @@
     <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
     <link href="https://cdn.jsdelivr.net/npm/daisyui@5/themes.css" rel="stylesheet" type="text/css" />
     @vite(['resources/css/app.css', 'resources/js/app.js'])
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Delius+Swash+Caps&family=Lexend+Deca:wght@100..900&family=Lexend:wght@217&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&family=Shadows+Into+Light+Two&family=Sour+Gummy:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Delius+Swash+Caps&family=Lexend+Deca:wght@100..900&family=Lexend:wght@217&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&family=Shadows+Into+Light+Two&family=Sour+Gummy:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
 
 </head>
 
-<body class="min-h-screen grid grid-rows-[8vh_1fr_8vh] bg-base-200 font-sans">
-     @yield('content')
-    <header class="body-font text-black bg-white h-[7.5vh]">
-        <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center h-full ">
-            <span class="ml-3 text-xl text-red-500">Laravel</span>
+<body class="min-h-screen grid grid-rows-[8vh_1fr_8vh] bg-base-200 relative">
+    @yield('content')
+    <header class=" text-black bg-white h-[8vh] sticky top-0 border-b-2 border-gray-400 z-40">
+        <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center h-full text-red-500">
+            <span class="ml-3 text-xl ">Laravel</span>
             <nav class="md:ml-auto md:mr-auto flex flex-wrap items-center text-base justify-center">
-                <a class="mr-5 hover:text-gray-900">Home</a>
-                <a class="mr-5 hover:text-gray-900">About</a>
-                <a class="mr-5 hover:text-gray-900">Gallery</a>
-
+                <a class="mr-5 hover:text-gray-900" href={{route('home')}}>Home</a>
+                <a class="mr-5 hover:text-gray-900" href={{route('about')}}>About</a>
+                <a class="mr-5 hover:text-gray-900" href={{route('gallery')}}>Gallery</a>
             </nav>
             <button
                 class="inline-flex items-center bg-gray-100 border-0 py-1 px-3 focus:outline-none hover:bg-gray-200 rounded text-base mt-4 md:mt-0">
                 Download
-
             </button>
         </div>
     </header>
@@ -36,10 +44,10 @@
     </main>
     <footer class="footer footer-center p-5 bg-base-300 text-base-content text-xs">
         <div>
-            <p>© 2025 Galagar, Glyzel - Built with Laravel and ❤️</p>
+            <p>©2025 Galagar, Glyzel - Built with Laravel and ❤️</p>
         </div>
     </footer>
-      <script src="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.js"></script>
 </body>
 
 </html>

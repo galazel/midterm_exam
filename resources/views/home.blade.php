@@ -6,7 +6,7 @@
         class="flex justify-center text-white body-font h-screen "style="background-size: cover; background-image: url('{{ asset('hero.jpg') }}') ">
         <div class="container mx-auto flex px-5 py-24 items-center justify-center flex-col">
             <div class="text-center lg:w-2/3 w-full">
-                <h1 class="title-font sm:text-4xl text-3xl mb-4 font-medium ">Welcome to Laravel Setup
+                <h1 class="section-title">Welcome to Laravel Setup
                 </h1>
                 <p class="mb-8 leading-relaxed"> Learn how to set up Laravel, the powerful PHP framework for building
                     modern web applications.
@@ -14,11 +14,10 @@
                     Laravel project running smoothly in no time.</p>
                 <div class="flex justify-center">
                     <button
-                        class="inline-flex text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded text-lg">Get
-                        Started</button>
-                    <button
-                        class="ml-4 inline-flex text-gray-700 bg-gray-100 border-0 py-2 px-6 focus:outline-none hover:bg-gray-200 rounded text-lg">Watch
-                        Video</button>
+                        class="inline-flex text-red-500 bg-white border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded text-lg">
+                        <a href="https://youtu.be/DKnn8TlJ4MA?si=5kXKCe0Jnak6r4C5" target="_blank">Watch
+                            Tutorial</a></button>
+
                 </div>
             </div>
         </div>
@@ -26,78 +25,42 @@
     <section class="text-gray-600 body-font p-5">
         <div class="container px-5 py-24 mx-auto">
             <div class="text-center mb-20">
-                <h1 class="sm:text-3xl text-2xl font-medium title-font text-gray-900 mb-4">Introduction to Laravel
+                <h1 class="section-title">INTRODUCTION TO LARAVEL
                 </h1>
                 <p class="text-base leading-relaxed xl:w-2/4 lg:w-3/4 mx-auto text-gray-500s">Laravel is a free,
                     open-source PHP web framework used for developing modern web
                     applications using the MVC (Model–View–Controller) architectural pattern. It was
-                    created by Taylor Otwell and first released in 2011. Laravel focuses on simplicity,
-                    elegance, and readability, providing tools and features that make web development faster
-                    and less error-prone.</p>
+                    created by Taylor Otwell and first released in 2011. Laravel focuses on:</p>
                 <div class="flex mt-6 justify-center">
                     <div class="w-16 h-1 rounded-full bg-indigo-500 inline-flex"></div>
                 </div>
             </div>
             <div class="flex flex-wrap sm:-m-4 -mx-4 -mb-10 -mt-4 md:space-y-0 space-y-6">
-                <div class="p-4 md:w-1/3 flex flex-col text-center items-center">
-                    <div
-                        class="w-20 h-20 inline-flex items-center justify-center rounded-full bg-indigo-100 text-indigo-500 mb-5 flex-shrink-0">
-                        <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
-                            stroke-width="2" class="w-10 h-10" viewBox="0 0 24 24">
-                            <path d="M22 12h-4l-3 9L9 3l-3 9H2"></path>
-                        </svg>
-                    </div>
-                    <div class="flex-grow">
-                        <h2 class="text-gray-900 text-lg title-font font-medium mb-3">Security</h2>
-                        <p class="leading-relaxed text-base"> Laravel comes with built-in security features like hashed
-                            passwords, protection against SQL injection, and CSRF tokens to keep your application safe.
-                        </p>
+                @foreach ($focuses as $focus)
+                    <div class="p-4 md:w-1/3 flex flex-col text-center items-center">
+                        <div
+                            class="w-40 h-40 inline-flex items-center justify-center rounded-full bg-indigo-100 text-indigo-500 mb-5 flex-shrink-0">
+                            <img src={{ $focus['logo'] }} alt="">
+                        </div>
+                        <div class="flex-grow">
+                            <h2 class="text-gray-900 text-lg title-font font-medium mb-3">{{ $focus['title'] }}</h2>
+                            <p class="leading-relaxed text-base">{{ $focus['message'] }}
+                            </p>
 
+                        </div>
                     </div>
-                </div>
-                <div class="p-4 md:w-1/3 flex flex-col text-center items-center">
-                    <div
-                        class="w-20 h-20 inline-flex items-center justify-center rounded-full bg-indigo-100 text-indigo-500 mb-5 flex-shrink-0">
-                        <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
-                            stroke-width="2" class="w-10 h-10" viewBox="0 0 24 24">
-                            <circle cx="6" cy="6" r="3"></circle>
-                            <circle cx="6" cy="18" r="3"></circle>
-                            <path d="M20 4L8.12 15.88M14.47 14.48L20 20M8.12 8.12L12 12"></path>
-                        </svg>
-                    </div>
-                    <div class="flex-grow">
-                        <h2 class="text-gray-900 text-lg title-font font-medium mb-3">Scalability</h2>
-                        <p class="leading-relaxed text-base"> Laravel supports scalable application development with
-                            features like queues, caching, and support for microservices architecture.
-                        </p>
-
-                    </div>
-                </div>
-                <div class="p-4 md:w-1/3 flex flex-col text-center items-center">
-                    <div
-                        class="w-20 h-20 inline-flex items-center justify-center rounded-full bg-indigo-100 text-indigo-500 mb-5 flex-shrink-0">
-                        <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
-                            stroke-width="2" class="w-10 h-10" viewBox="0 0 24 24">
-                            <path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"></path>
-                            <circle cx="12" cy="7" r="4"></circle>
-                        </svg>
-                    </div>
-                    <div class="flex-grow">
-                        <h2 class="text-gray-900 text-lg title-font font-medium mb-3">Maintainability</h2>
-                        <p class="leading-relaxed text-base"> With clear MVC architecture, reusable components, and
-                            Laravel’s elegant syntax, your code stays organized and easy to maintain.
-                        </p>
-
-                    </div>
-                </div>
+                @endforeach
             </div>
 
         </div>
     </section>
-    <section class="text-gray-600 body-font">
-        <div class="container px-5 py-24 mx-auto flex flex-wrap">
-            <div class="grid grid-cols-2 gap-5">
-                <div>
+    <section class="flex justify-center m-10">
+        <div class="flex flex-col gap-10">
+            <div class="flex items-center justify-center  ">
+                <p class="text-[8rem] ">FEATURES</p>
+            </div>
+            <div>
+                @foreach ($features as $feature)
                     <div class="flex relative pb-12">
                         <div class="h-full w-10 absolute inset-0 flex items-center justify-center">
                             <div class="h-full w-1 bg-gray-200 pointer-events-none">
@@ -106,180 +69,39 @@
                         </div>
                         <div
                             class="flex-shrink-0 w-10 h-10 rounded-full bg-indigo-500 inline-flex items-center justify-center text-white relative z-10">
-                            <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
-                                stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
-                                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                stroke-width="1.5" stroke="currentColor" class="size-6">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M9.594 3.94c.09-.542.56-.94 1.11-.94h2.593c.55 0 1.02.398 1.11.94l.213 1.281c.063.374.313.686.645.87.074.04.147.083.22.127.325.196.72.257 1.075.124l1.217-.456a1.125 1.125 0 0 1 1.37.49l1.296 2.247a1.125 1.125 0 0 1-.26 1.431l-1.003.827c-.293.241-.438.613-.43.992a7.723 7.723 0 0 1 0 .255c-.008.378.137.75.43.991l1.004.827c.424.35.534.955.26 1.43l-1.298 2.247a1.125 1.125 0 0 1-1.369.491l-1.217-.456c-.355-.133-.75-.072-1.076.124a6.47 6.47 0 0 1-.22.128c-.331.183-.581.495-.644.869l-.213 1.281c-.09.543-.56.94-1.11.94h-2.594c-.55 0-1.019-.398-1.11-.94l-.213-1.281c-.062-.374-.312-.686-.644-.87a6.52 6.52 0 0 1-.22-.127c-.325-.196-.72-.257-1.076-.124l-1.217.456a1.125 1.125 0 0 1-1.369-.49l-1.297-2.247a1.125 1.125 0 0 1 .26-1.431l1.004-.827c.292-.24.437-.613.43-.991a6.932 6.932 0 0 1 0-.255c.007-.38-.138-.751-.43-.992l-1.004-.827a1.125 1.125 0 0 1-.26-1.43l1.297-2.247a1.125 1.125 0 0 1 1.37-.491l1.216.456c.356.133.751.072 1.076-.124.072-.044.146-.086.22-.128.332-.183.582-.495.644-.869l.214-1.28Z" />
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
                             </svg>
-                        </div>
-                        <div class="flex-grow pl-4">
-                            <h2 class="font-medium title-font text-sm text-gray-900 mb-1 tracking-wider">MVC
-                                Architecture</h2>
-                            <p class="leading-relaxed"> Separates logic, presentation, and data for cleaner and more
-                                maintainable code.</p>
-                        </div>
-                    </div>
-                    <div class="flex relative pb-12">
-                        <div class="h-full w-10 absolute inset-0 flex items-center justify-center">
-                            <div class="h-full w-1 bg-gray-200 pointer-events-none"></div>
-                        </div>
-                        <div
-                            class="flex-shrink-0 w-10 h-10 rounded-full bg-indigo-500 inline-flex items-center justify-center text-white relative z-10">
-                            <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
-                                stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
-                                <path d="M22 12h-4l-3 9L9 3l-3 9H2"></path>
-                            </svg>
-                        </div>
-                        <div class="flex-grow pl-4">
-                            <h2 class="font-medium title-font text-sm text-gray-900 mb-1 tracking-wider">Routing System
-                            </h2>
-                            <p class="leading-relaxed"> Defines how URLs map to specific controllers and actions for
-                                flexible web routing.</p>
-                        </div>
-                    </div>
-                    <div class="flex relative pb-12">
-                        <div class="h-full w-10 absolute inset-0 flex items-center justify-center">
-                            <div class="h-full w-1 bg-gray-200 pointer-events-none"></div>
-                        </div>
-                        <div
-                            class="flex-shrink-0 w-10 h-10 rounded-full bg-indigo-500 inline-flex items-center justify-center text-white relative z-10">
-                            <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
-                                stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
-                                <circle cx="12" cy="5" r="3"></circle>
-                                <path d="M12 22V8M5 12H2a10 10 0 0020 0h-3"></path>
-                            </svg>
-                        </div>
-                        <div class="flex-grow pl-4">
-                            <h2 class="font-medium title-font text-sm text-gray-900 mb-1 tracking-wider">Eloquent ORM
-                            </h2>
-                            <p class="leading-relaxed"> Interact with databases using PHP syntax instead of raw SQL,
-                                simplifying queries.
-                            </p>
-                            </p>
-                        </div>
-                    </div>
-                    <div class="flex relative pb-12">
-                        <div class="h-full w-10 absolute inset-0 flex items-center justify-center">
-                            <div class="h-full w-1 bg-gray-200 pointer-events-none"></div>
-                        </div>
-                        <div
-                            class="flex-shrink-0 w-10 h-10 rounded-full bg-indigo-500 inline-flex items-center justify-center text-white relative z-10">
-                            <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
-                                stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
-                                <path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"></path>
-                                <circle cx="12" cy="7" r="4"></circle>
-                            </svg>
-                        </div>
-                        <div class="flex-grow pl-4">
-                            <h2 class="font-medium title-font text-sm text-gray-900 mb-1 tracking-wider">Blade Template
-                                Engine</h2>
-                            <p class="leading-relaxed"> Simplifies the creation of dynamic views with clean and
-                                readable syntax.
-                            </p>
-                            </p>
-                        </div>
-                    </div>
-                    <div class="flex relative  pb-12">
-                        <div class="h-full w-10 absolute inset-0 flex items-center justify-center">
-                            <div class="h-full w-1 bg-gray-200 pointer-events-none"></div>
-                        </div>
-                        <div
-                            class="flex-shrink-0 w-10 h-10 rounded-full bg-indigo-500 inline-flex items-center justify-center text-white relative z-10">
-                            <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
-                                stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
-                                <path d="M22 11.08V12a10 10 0 11-5.93-9.14"></path>
-                                <path d="M22 4L12 14.01l-3-3"></path>
-                            </svg>
-                        </div>
-                        <div class="flex-grow pl-4">
-                            <h2 class="font-medium title-font text-sm text-gray-900 mb-1 tracking-wider">Artisan CLI
-                            </h2>
-                            <p class="leading-relaxed">Automates repetitive tasks with command-line commands for faster
-                                development.</p>
-                        </div>
-                    </div>
-                    <div class="flex relative pb-12">
-                        <div class="h-full w-10 absolute inset-0 flex items-center justify-center">
-                            <div class="h-full w-1 bg-gray-200 pointer-events-none"></div>
-                        </div>
-                        <div
-                            class="flex-shrink-0 w-10 h-10 rounded-full bg-indigo-500 inline-flex items-center justify-center text-white relative z-10">
-                            <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
-                                stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
-                                <path d="M22 11.08V12a10 10 0 11-5.93-9.14"></path>
-                                <path d="M22 4L12 14.01l-3-3"></path>
-                            </svg>
-                        </div>
-                        <div class="flex-grow pl-4">
-                            <h2 class="font-medium title-font text-sm text-gray-900 mb-1 tracking-wider">Security</h2>
-                            <p class="leading-relaxed"> Protects your application against SQL injection, XSS, and CSRF
-                                attacks.</p>
-                        </div>
-                    </div>
-                    <div class="flex relative pb-12">
-                        <div class="h-full w-10 absolute inset-0 flex items-center justify-center">
-                            <div class="h-full w-1 bg-gray-200 pointer-events-none"></div>
-                        </div>
-                        <div
-                            class="flex-shrink-0 w-10 h-10 rounded-full bg-indigo-500 inline-flex items-center justify-center text-white relative z-10">
-                            <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
-                                stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
-                                <path d="M22 11.08V12a10 10 0 11-5.93-9.14"></path>
-                                <path d="M22 4L12 14.01l-3-3"></path>
-                            </svg>
-                        </div>
-                        <div class="flex-grow pl-4">
-                            <h2 class="font-medium title-font text-sm text-gray-900 mb-1 tracking-wider">Authentication
-                                & Authorization</h2>
-                            <p class="leading-relaxed"> Simplifies user login, registration, and access control for
-                                secure applications.</p>
-                        </div>
-                    </div>
-                    <div class="flex relative pb-12">
-                        <div class="h-full w-10 absolute inset-0 flex items-center justify-center">
-                            <div class="h-full w-1 bg-gray-200 pointer-events-none"></div>
-                        </div>
-                        <div
-                            class="flex-shrink-0 w-10 h-10 rounded-full bg-indigo-500 inline-flex items-center justify-center text-white relative z-10">
-                            <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
-                                stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
-                                <path d="M22 11.08V12a10 10 0 11-5.93-9.14"></path>
-                                <path d="M22 4L12 14.01l-3-3"></path>
-                            </svg>
-                        </div>
-                        <div class="flex-grow pl-4">
-                            <h2 class="font-medium title-font text-sm text-gray-900 mb-1 tracking-wider">Database
-                                Migration & Seeding</h2>
-                            <p class="leading-relaxed"> Manage database schema versioning and seed sample data for
-                                development and testing.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="bg-red-500">
-                    <img class=" h-full bg-center" src="/laravel.jpg" alt="step">
-                </div>
 
+                        </div>
+                        <div class="flex-grow pl-4">
+                            <h2 class="font-medium title-font text-sm text-gray-900 mb-1 tracking-wider">
+                                {{ $feature['title'] }}</h2>
+                            <p class="leading-relaxed">{{ $focus['message'] }}</p>
+                        </div>
+                    </div>
+                @endforeach
             </div>
         </div>
     </section>
-    <section class="flex flex-col items-center py-16 px-4 sm:px-6 lg:px-8">
-        <h3 class="text-3xl sm:text-4xl font-extrabold text-gray-800 mb-12  pb-2">
-            Laravel Development Environment Setup
-             <div class="flex mt-6 justify-center">
-                    <div class="w-16 h-1 rounded-full bg-indigo-500 inline-flex"></div>
-                </div>
+    <section class="flex flex-col gap-10 items-center py-16 px-4 sm:px-6 lg:px-8">
+        <h3 class="section-title">
+            LARAVEL DEVELOPMENT ENVIRONMENT SETUP
         </h3>
-       
+
         <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl w-full">
 
 
-            <div
-                class="card p-6 bg-white border border-gray-200 rounded-xl shadow-xl hover:shadow-2xl transition duration-300">
+            <div class="card p-6 bg-white border rounded-xl hover:shadow-2xl transition duration-300">
 
-                <svg class="w-8 h-8 text-indigo-500 mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"
-                    xmlns="http://www.w3.org/2000/svg">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                        d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.001 12.001 0 0012 21a12.001 12.001 0 008.618-18.016z">
-                    </path>
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                    stroke="currentColor" class="size-6">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                        d="m11.25 11.25.041-.02a.75.75 0 0 1 1.063.852l-.708 2.836a.75.75 0 0 0 1.063.853l.041-.021M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Zm-9-3.75h.008v.008H12V8.25Z" />
                 </svg>
 
                 <h5 class="mb-3 text-2xl font-bold tracking-tight text-gray-900">Step 1: Prerequisites</h5>
@@ -296,14 +118,14 @@
                 </ul>
             </div>
 
-            <div
-                class="card p-6 bg-white border border-gray-200 rounded-xl shadow-xl hover:shadow-2xl transition duration-300">
+            <div class="card p-6 bg-white border  rounded-xl  hover:shadow-2xl transition duration-300">
 
-                <svg class="w-8 h-8 text-indigo-500 mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"
-                    xmlns="http://www.w3.org/2000/svg">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                        d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path>
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                    stroke="currentColor" class="size-6">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                        d="m7.875 14.25 1.214 1.942a2.25 2.25 0 0 0 1.908 1.058h2.006c.776 0 1.497-.4 1.908-1.058l1.214-1.942M2.41 9h4.636a2.25 2.25 0 0 1 1.872 1.002l.164.246a2.25 2.25 0 0 0 1.872 1.002h2.092a2.25 2.25 0 0 0 1.872-1.002l.164-.246A2.25 2.25 0 0 1 16.954 9h4.636M2.41 9a2.25 2.25 0 0 0-.16.832V12a2.25 2.25 0 0 0 2.25 2.25h15A2.25 2.25 0 0 0 21.75 12V9.832c0-.287-.055-.57-.16-.832M2.41 9a2.25 2.25 0 0 1 .382-.632l3.285-3.832a2.25 2.25 0 0 1 1.708-.786h8.43c.657 0 1.281.287 1.709.786l3.284 3.832c.163.19.291.404.382.632M4.5 20.25h15A2.25 2.25 0 0 0 21.75 18v-2.625c0-.621-.504-1.125-1.125-1.125H3.375c-.621 0-1.125.504-1.125 1.125V18a2.25 2.25 0 0 0 2.25 2.25Z" />
                 </svg>
+
                 <h5 class="mb-3 text-2xl font-bold tracking-tight text-gray-900">Step 2: Installing Laravel</h5>
                 <p class="mb-4 font-normal text-gray-600">
                     Use Composer to create a new Laravel project in your desired directory.
@@ -322,14 +144,15 @@
             </div>
 
 
-            <div
-                class="card p-6 bg-white border border-gray-200 rounded-xl shadow-xl hover:shadow-2xl transition duration-300">
+            <div class="card p-6 bg-white border rounded-xl hover:shadow-2xl transition duration-300">
 
-                <svg class="w-8 h-8 text-indigo-500 mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"
-                    xmlns="http://www.w3.org/2000/svg">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                        d="M3 7v10a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2h-6l-2-2H5a2 2 0 00-2 2z"></path>
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                    stroke="currentColor" class="size-6">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                        d="M2.036 12.322a1.012 1.012 0 0 1 0-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178Z" />
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
                 </svg>
+
                 <h5 class="mb-3 text-2xl font-bold tracking-tight text-gray-900">Step 3: Directory Structure Overview
                 </h5>
                 <p class="mb-4 font-normal text-gray-600">
@@ -346,13 +169,13 @@
             </div>
 
 
-            <div
-                class="card p-6 bg-white border border-gray-200 rounded-xl shadow-xl hover:shadow-2xl transition duration-300">
-                <svg class="w-8 h-8 text-indigo-500 mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"
-                    xmlns="http://www.w3.org/2000/svg">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                        d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+            <div class="card p-6 bg-white border  rounded-xl hover:shadow-2xl transition duration-300">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                    stroke="currentColor" class="size-6">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                        d="M5.25 14.25h13.5m-13.5 0a3 3 0 0 1-3-3m3 3a3 3 0 1 0 0 6h13.5a3 3 0 1 0 0-6m-16.5-3a3 3 0 0 1 3-3h13.5a3 3 0 0 1 3 3m-19.5 0a4.5 4.5 0 0 1 .9-2.7L5.737 5.1a3.375 3.375 0 0 1 2.7-1.35h7.126c1.062 0 2.062.5 2.7 1.35l2.587 3.45a4.5 4.5 0 0 1 .9 2.7m0 0a3 3 0 0 1-3 3m0 3h.008v.008h-.008v-.008Zm0-6h.008v.008h-.008v-.008Zm-3 6h.008v.008h-.008v-.008Zm0-6h.008v.008h-.008v-.008Z" />
                 </svg>
+
                 <h5 class="mb-3 text-2xl font-bold tracking-tight text-gray-900">Step 4: Running the Server</h5>
                 <p class="mb-4 font-normal text-gray-600">
                     Navigate into your new project directory and use Artisan to start the local development server.
@@ -364,21 +187,18 @@
                 </ol>
             </div>
 
-            <div
-                class="md:col-span-2 card p-6 bg-white border border-gray-200 rounded-xl shadow-xl hover:shadow-2xl transition duration-300">
+            <div class="md:col-span-2 card p-6 bg-white border  rounded-xl  hover:shadow-2xl transition duration-300">
 
-                <svg class="w-8 h-8 text-indigo-500 mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"
-                    xmlns="http://www.w3.org/2000/svg">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                        d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z">
-                    </path>
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                        d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                    stroke="currentColor" class="size-6">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                        d="M8.25 3v1.5M4.5 8.25H3m18 0h-1.5M4.5 12H3m18 0h-1.5m-15 3.75H3m18 0h-1.5M8.25 19.5V21M12 3v1.5m0 15V21m3.75-18v1.5m0 15V21m-9-1.5h10.5a2.25 2.25 0 0 0 2.25-2.25V6.75a2.25 2.25 0 0 0-2.25-2.25H6.75A2.25 2.25 0 0 0 4.5 6.75v10.5a2.25 2.25 0 0 0 2.25 2.25Zm.75-12h9v9h-9v-9Z" />
                 </svg>
+
                 <h5 class="mb-3 text-2xl font-bold tracking-tight text-gray-900">Step 5: Environment Configuration
                     (.env)</h5>
                 <p class="mb-4 font-normal text-gray-600">
-                    Laravel uses the **`.env`** file for environment variables like application details and database
+                    Laravel uses the .env file for environment variables like application details and database
                     credentials. You must update this file to connect to your database.
                 </p>
                 <h6 class="font-semibold text-gray-800 mb-2">Example Database Configuration:</h6>
@@ -399,8 +219,8 @@ DB_PASSWORD=your_password
         </div>
     </section>
     <section class="flex flex-col gap-10 justify-center items-center h-screen">
-        <h4 class="sm:text-3xl text-2xl font-medium title-font text-gray-900 mb-4">Summary </h4>
-        <table class="w-[30vw] text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
+        <p class="section-title">SUMMARY</p>
+        <table class="w-[50vw] text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
             <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
                 <tr>
                     <th scope="col" class="px-6 py-3">

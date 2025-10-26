@@ -4,17 +4,22 @@
 @plugin "flowbite/plugin";
 @import "flowbite/src/themes/default";
 
+
 @source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
 @source '../../storage/framework/views/*.php';
 @source '../**/*.blade.php';
 @source '../**/*.js';
 @source "../../node_modules/flowbite";
 
+
+
 @theme {
     --font-sans: 'Instrument Sans', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
         'Segoe UI Symbol', 'Noto Color Emoji';
 
     --animate-fade-out: fade-out 4s ease-in-out forwards;
+    --font-main: "Montserrat", sans-serif;
+    --font-section: "Lexend Deca", sans-serif;
 
     @keyframes fade-out {
         0%, 70% {
@@ -26,3 +31,15 @@
         }
     }
 }
+@layer base{
+    body{
+        @apply font-main
+    }
+    .section-title{
+        @apply font-section text-6xl p-5 text-red-500
+    }
+
+
+}
+
+
