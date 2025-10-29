@@ -36,10 +36,10 @@
         @apply font-main
     }
     .section-title{
-        @apply font-main text-6xl p-5 text-red-500
+        @apply font-main font-extrabold text-6xl p-5 text-red-500
     }
     .resume-title{
-        @apply font-main text-6xl  text-black font-extrabold
+        @apply font-main text-6xl text-black font-extrabold
     }
     .about h2{
          @apply font-section text-[2rem]  text-black font-semibold

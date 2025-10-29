@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{ isset($title) ? $title . ' - Laravel Setup' : 'Glyzel Galagar' }}</title>
+    <title>{{ isset($title) ? $title . ' - Galagar' : 'Glyzel Galagar' }}</title>
     <link rel="preconnect" href="<https://fonts.bunny.net>">
     <link href="https://fonts.bunny.net/css?family=instrument-sans:400,500,600,700" rel="stylesheet" />
     <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
@@ -25,10 +25,10 @@
 
 <body class="min-h-screen grid grid-rows-[8vh_1fr_8vh] bg-base-200 relative">
     @yield('content')
-    <header class=" text-black bg-white h-[8vh] sticky top-0 border-b-2 border-gray-400 z-40">
-        <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center h-full text-red-500">
+    <header class=" text-black bg-red-500 h-[8vh] sticky top-0   z-40">
+        <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center h-full text-white">
             {{-- <span class="ml-3 text-xl ">Laravel</span> --}}
-            <nav class="md:ml-auto md:mr-auto flex flex-wrap items-center text-base justify-center">
+            <nav class="md:ml-auto md:mr-auto flex flex-wrap items-center text-base justify-center ">
                 <a class="mr-5 hover:text-gray-900" href={{route('home')}}>Home</a>
                 <a class="mr-5 hover:text-gray-900" href={{route('about')}}>About</a>
                 <a class="mr-5 hover:text-gray-900" href={{route('gallery')}}>Gallery</a>

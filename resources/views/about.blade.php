@@ -10,7 +10,7 @@
                     <li class="list-disc">Ibo Relocation Site Lapu-Lapu City</li>
                     <li class="list-disc">Cebu 6015</li>
                     <li class="list-disc">glyzelgalagar65@gmail.com</li>
-                    <li class="list-dics">+63 9686168340</li>
+                    <li class="list-disc">+63 9686168340</li>
                 </ul>
             </div>
             <div class=" border-b-2 pb-2">

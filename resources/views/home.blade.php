@@ -79,9 +79,9 @@
 
                         </div>
                         <div class="flex-grow pl-4">
-                            <h2 class="font-medium title-font text-sm text-gray-900 mb-1 tracking-wider">
+                            <h2 class=" title-font font-bold text-sm text-gray-900 mb-1 tracking-wider">
                                 {{ $feature['title'] }}</h2>
-                            <p class="leading-relaxed">{{ $focus['message'] }}</p>
+                            <p class="leading-relaxed">{{ $feature['message'] }}</p>
                         </div>
                     </div>
                 @endforeach
